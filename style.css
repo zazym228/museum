@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css2?family=Forum&display=swap);
+
+@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap);
+
+body {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: black;
+}
+
+header {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: #ffffff;
+}
+
+.Logo {
+    font-family: "Forum";
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 5px;
+    display: flex;
+    column-gap: 25px;;
+    flex-direction: row-reverse;
+}   
+
+.Navigation {
+    font-family: "Roboto";
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 100%;
+    letter-spacing: 2px;
+    display: flex;
+    column-gap: 55px;
+}
+    /* max-width: 1440px;
+    width: 100%;
+    margin: 0 auto; */
+    
