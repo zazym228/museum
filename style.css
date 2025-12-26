@@ -1,46 +1,249 @@
-@import url(https://fonts.googleapis.com/css2?family=Forum&display=swap);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
 
-@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap);
-
-body {
+.Backround {
+    background-color: #000000;
     max-width: 1920px;
-    width: 100%;
-    margin: 0 auto;
-    background-color: black;
 }
 
 header {
+    background-color: #000000;
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    height: 150px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
-    color: #ffffff;
+    padding: 50px 0px 0px 0px;
 }
 
-.Logo {
+main {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+footer {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1 {
+    color: #ffffff;
     font-family: "Forum";
+    font-weight: 200;
     font-size: 28px;
     line-height: 100%;
     letter-spacing: 5px;
-    display: flex;
-    column-gap: 25px;;
-    flex-direction: row-reverse;
-}   
+    text-transform: uppercase;
+}
 
-.Navigation {
+header h2 {
+    color: #ffffff;
     font-family: "Roboto";
+    font-weight: 100;
     font-size: 22px;
-    font-weight: 200;
     line-height: 100%;
     letter-spacing: 2px;
+}
+
+.header-logo {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    column-gap: 25px;
+}
+
+.header-nav {
     display: flex;
     column-gap: 55px;
 }
-    /* max-width: 1440px;
+
+.Welcome {
+    width: 1440px;
+    height: 810px;
+    opacity: 1;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.Welcome-frame1 {
+    width: 598px;
+    height: 388px;
+    opacity: 1;
+    margin-top: -150px;
+}
+
+.Welcome-frame1 h1 {
+    color: #ffffff;
+    font-family: "Forum";
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.Welcome-frame1 h4 {
+    color: #ffffff;
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 2px;
+}
+
+.Welcome-frame1 a {
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 2px;
+    text-align: center;
+    vertical-align: middle;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.Welcome-frame1 button {
+    background-color: #710707;
+    width: 360px;
+    height: 75px;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.Welcome-frame2 {
+}
+
+#welcome-img {
+    background: linear-gradient(
+        right,
+        #000000 0%,
+        rgba(0, 0, 0, 0.5) 16.19%,
+        rgba(0, 0, 0, 0) 30.73%
+    );
+}
+
+.virtual-tour {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.virtual-tour::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(-50vw + 50%);
+    right: calc(-50vw + 50%);
+    background-color: #ffffff;
+    z-index: -1;
+}
+
+.virtual-tour-header {
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.virtual-tour h1 {
+    color: #9d8665;
+    font-family: "Forum", serif;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+}
+
+.subtitle {
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    color: #333;
+    display: block;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 30px;
+    justify-items: stretch;
+}
+
+.photo-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+}
+
+.photo-card h2 {
+    font-family: "Forum", serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin: 0;
+    color: #333;
+}
+
+.rectangle {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+
+.photo-card h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin: 0;
+    color: #333;
+}
+
+.photo-card h4 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin: 0;
+    color: #666;
+}
+
+.virtual-tour-wrapper {
+    background-color: #ffffff; /* цвет фона на всю ширину */
+    width: 100%;
+}
+
+/* max-width: 1440px;
     width: 100%;
     margin: 0 auto; */
-    
