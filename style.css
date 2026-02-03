@@ -1187,3 +1187,24 @@ footer {
 /* max-width: 1440px;
     width: 100%;
     margin: 0 auto; */
+
+.Booking-tickets-left-content {
+
+}
+
+.left-content-logo h1 {
+    font-family: 'Forum';
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+}
+
+.left-content-logo h4 {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}

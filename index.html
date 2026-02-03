@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="script.js">
     <title>Document</title>
 </head>
 
@@ -27,23 +28,25 @@
 
 <main>
     <section class="Welcome">
-    <div class="welcome-container">
-        <div class="Welcome-content">
-            <h1>
-                Welcome <br />
-                to the Louvre
-            </h1>
-            <h4>From the castle to the museum</h4>
-            <button>
-                <a href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736">
-                    Discover the Louvre
-                </a>
-            </button>
+        <div class="welcome-container">
+            <div class="Welcome-content">
+                <h1>
+                    Welcome <br />
+                    to the Louvre
+                </h1>
+                <h4>From the castle to the museum</h4>
+                <button>
+                    <a
+                        href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736">
+                        Discover the Louvre
+                    </a>
+                </button>
+            </div>
+            <div class="Welcome-image">
+                <img id="welcome-img" src="images/mono-lisa.jpg" style="width: 1000px; height: 750px;" alt="Mona Lisa"
+                    class="welcome-img" />
+            </div>
         </div>
-        <div class="Welcome-image">
-            <img id="welcome-img" src="images/mono-lisa.jpg" style="width: 1000px; height: 750px;" alt="Mona Lisa" class="welcome-img" />
-        </div>
-    </div>
     </section>
     <section class="virtual-tour">
         <div class="virtual-tour-header">
@@ -117,32 +120,32 @@
                 color: #710707;
                 margin-bottom: 50px;
                 margin-top: -10px;
-            " alt="" />
+            " alt="">
                 <h4>
                     Las Meninas is a 1656 painting by Diego Velázquez, the leading
-                    <br />
+                    <br>
                     artist of the Spanish Golden Age.
                 </h4>
                 <h4>
                     It was cleaned in 1984 to remove a <span>"yellow veil"</span> of
-                    dust that had <br />
+                    dust that had <br>
                     gathered since the previous restoration in the 19th century.
                 </h4>
                 <h4>
                     The cleaning provoked furious protests, not because the picture had
-                    <br />
+                    <br>
                     been damaged in any way, but because it looked different.
                 </h4>
             </div>
             <div class="images-container">
                 <div class="images-wrapper">
                     <div class="image-left">
-                        <img id="image1" src="images/image1.jpg" alt="" />
+                        <img id="image1" src="images/image1.jpg" alt="">
                     </div>
                     <div class="image-right">
-                        <img id="image2" src="images/image2.jpg" alt="" />
+                        <img id="image2" src="images/image2.jpg" alt="">
                     </div>
-                    <img id="explore" src="images/explore slider.png" alt="" />
+                    <img id="explore" src="images/explore slider.png" alt="">
                 </div>
             </div>
         </div>
@@ -168,13 +171,13 @@
                     <img src="art/galery2.jpg" alt="" />
                     <img src="art/galery9.jpg" alt="" />
                     <img src="art/galery4.jpg" alt="" />
-                    <img id="column-img" src="art/galery61.png" alt="" />
+                    <img id="column-img" src="art/galery61.png" alt="">
                 </div>
                 <div class="gallery-column middle-column">
                     <img src="art/galery1.jpg" alt="" />
                     <img src="art/galery8.jpg" alt="" />
                     <img src="art/galery3.jpg" alt="" />
-                    <img id="column-img" src="art/galery51.png" alt="" />
+                    <img id="column-img" src="art/galery51.png" alt="">
                 </div>
                 <div class="gallery-column right-column">
                     <img src="art/galery7.jpg" alt="" />
@@ -205,31 +208,30 @@
                     <a id="Buy-Now" href="">Buy Now</a>
                 </div>
             </div>
-        </div
-    </section>
-    <div class="parallax-image-container">
-        <img src="images/parallax.png" alt="" class="parallax-image">
-    </div>
-    <section class="Contacts">
-        <div id="cntcts">
-            <h1>CONTACTS</h1>
+        </div </section>
+        <div class="parallax-image-container">
+            <img src="images/parallax.png" alt="" class="parallax-image">
         </div>
-        <img src="images/Rectangle.png" style="width: 1440px; height: 3px" alt="" />
-        <div class="Palais-Royal-container">
-            <div class="Palais-Royal">
-                <h2>
-                    Palais Royal <br />
-                    Musee du Louvre
-                </h2>
-                <div class="Palais-Royal-text-container">
-                    <h4>address: 75001 Paris, France</h4>
-                    <h4>phone: +33(0) 1 40 20 50 50</h4>
-                    <h4>mail: info@louvre.fr</h4>
-                </div>
+        <section class="Contacts">
+            <div id="cntcts">
+                <h1>CONTACTS</h1>
             </div>
-            <img src="images/louvre_map.png" alt="" />
-        </div>
-    </section>
+            <img src="images/Rectangle.png" style="width: 1440px; height: 3px; margin-top: 50px;" alt="" />
+            <div class="Palais-Royal-container">
+                <div class="Palais-Royal">
+                    <h2>
+                        Palais Royal <br>
+                        Musee du Louvre
+                    </h2>
+                    <div class="Palais-Royal-text-container">
+                        <h4>address: 75001 Paris, France</h4>
+                        <h4>phone: +33(0) 1 40 20 50 50</h4>
+                        <h4>mail: info@louvre.fr</h4>
+                    </div>
+                </div>
+                <img src="images/louvre_map.png" alt="" />
+            </div>
+        </section>
 </main>
 
 <footer>
@@ -257,7 +259,6 @@
             <img src="images/Twitter.png" alt="http://twitter.com/museelouvre" />
             <img src="images/Pinterest.png" alt="https://www.pinterest.fr/museedulouvre/" />
         </div>
-        <!-- Заменяем инлайн-стили на класс -->
         <img src="images/Rectangle 24.png" class="footer-line" alt="" />
         <div class="Footer-last-string">
             <h3>© 2021</h3>
