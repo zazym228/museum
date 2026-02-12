@@ -1,12 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 header {
     background-color: #000000;
     width: 100%;
     padding: 50px 0 0 0;
+    position: relative;
+    z-index: 1000;
 }
 
 .header-container {
@@ -53,140 +73,47 @@ header h2 {
 
 .header-nav {
     display: flex;
-    column-gap: 55px;
+    align-items: center;
+    gap: 55px;
 }
 
-@media (max-width: 1024px) {
-    .header-container {
-        max-width: 1024px;
-        padding: 0 20px;
-    }
-    
-    .header-nav {
-        display: none;
-    }
-    
-    .header-container::after {
-        content: '';
-        display: block;
-        width: 30px;
-        height: 20px;
-        background: linear-gradient(to bottom, 
-            #fff 0%, #fff 20%, 
-            transparent 20%, transparent 40%, 
-            #fff 40%, #fff 60%, 
-            transparent 60%, transparent 80%, 
-            #fff 80%, #fff 100%);
-        cursor: pointer;
-    }
-    
-    .header-container {
-        position: relative;
-        justify-content: flex-start;
-    }
-    
-    .header-container::after {
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+.header-nav button {
+    display: block;
+    color: #ffffff;
+    background-color: transparent;
+    font-family: "Roboto";
+    font-weight: 200;
+    font-size: 22px;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
 }
 
-@media (max-width: 768px) {
-    .header-container {
-        max-width: 768px;
-        padding: 0 20px;
-    }
-    
-    header {
-        padding: 30px 0 0 0;
-    }
-    
-    header h1 {
-        font-size: 24px;
-        letter-spacing: 3px;
-    }
-    
-    .header-logo img {
-        width: 40px;
-        height: 21px;
-    }
-    
-    .header-logo {
-        column-gap: 15px;
-    }
-    
-    .header-container::after {
-        width: 25px;
-        height: 16px;
-    }
+.header-nav button {
+    color: #ffffff;
+    background-color: #000000;
+    font-family: "Roboto";
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
 }
 
-@media (max-width: 420px) {
-    .header-container {
-        max-width: 420px;
-        padding: 0 15px;
-    }
-    
-    header {
-        padding: 20px 0 0 0;
-    }
-    
-    header h1 {
-        font-size: 20px;
-        letter-spacing: 2px;
-    }
-    
-    .header-logo img {
-        width: 32px;
-        height: 17px;
-    }
-    
-    .header-container::after {
-        right: 15px;
-        width: 20px;
-        height: 14px;
-    }
+.header-nav button {
+    display: block;
 }
 
-@media (max-width: 1919px) {
-    .header-nav {
-        display: none;
-    }
-    
-    .header-container::after {
-        content: '';
-        display: block;
-        width: 30px;
-        height: 20px;
-        background: linear-gradient(to bottom, 
-            #fff 0%, #fff 20%, 
-            transparent 20%, transparent 40%, 
-            #fff 40%, #fff 60%, 
-            transparent 60%, transparent 80%, 
-            #fff 80%, #fff 100%);
-        cursor: pointer;
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    
-    .header-container {
-        position: relative;
-        justify-content: flex-start;
-    }
+.burger-icon {
+    display: none;
 }
 
-@media (min-width: 1920px) {
-    .header-nav {
-        display: flex;
-    }
-    
-    .header-container::after {
-        display: none;
-    }
+.header-nav img {
+    display: block;
+    width: 32px;
+    height: 18px;
+    cursor: pointer;
 }
 
 .Welcome {
@@ -194,6 +121,10 @@ header h2 {
     box-sizing: border-box;
     padding-bottom: 60px;
     height: 810px;
+}
+
+.Welcome-content.hidden {
+    visibility: hidden;
 }
 
 .welcome-container {
@@ -217,6 +148,7 @@ header h2 {
     font-family: "Forum";
     font-weight: 400;
     font-size: 80px;
+    white-space: pre-line;
     line-height: 90px;
     letter-spacing: 5px;
     text-transform: uppercase;
@@ -265,8 +197,8 @@ header h2 {
 }
 
 .welcome-img {
-    width: auto;
-    height: 100%;
+    width: 1000px;
+    height: 750px;
     display: block;
     position: absolute;
     right: 0;
@@ -280,6 +212,55 @@ header h2 {
     -webkit-mask-image: linear-gradient(to left,
             rgba(0, 0, 0, 1) 40%,
             rgba(0, 0, 0, 0) 100%);
+}
+
+.burger-menu {
+    position: absolute;
+    top: 100px;
+    left: -297px;
+    width: 297px;
+    height: 585px;
+    background-color: #000;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0 0 40px;
+    box-sizing: border-box;
+    transition: left 0.4s ease;
+    margin-left: 20px;
+    margin-top: 100px;
+}
+
+.burger-menu.active {
+    left: 0;
+}
+
+.burger-menu button {
+    width: 122px;
+    height: 23px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 2px;
+    text-align: left;
+    padding: 0;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.burger-menu button:hover {
+    color: #710707;
+}
+
+.burger-icon {
+    display: block;
+    width: 32px;
+    height: 18px;
+    cursor: pointer;
 }
 
 .virtual-tour {
@@ -341,7 +322,6 @@ header h2 {
 
 .photo-card img {
     width: 100%;
-    height: 300px;
     object-fit: cover;
     margin-bottom: 20px;
     border-radius: 4px;
@@ -372,6 +352,24 @@ header h2 {
     margin: 0;
 }
 
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-items: center;
+}
+
+.card-img {
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+}
+
+.card-line {
+    width: 300px;
+    height: 2px;
+}
+
 .photo-card h3 {
     font-family: "Roboto", sans-serif;
     font-weight: 200;
@@ -397,72 +395,6 @@ header h2 {
     width: 100%;
 }
 
-@media (max-width: 1024px) {
-    .virtual-tour {
-        max-width: 964px;
-        margin: 0 auto;
-    }
-    
-    .photo-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, auto);
-    }
-    
-    .virtual-tour {
-        padding: 60px 20px;
-    }
-    
-    .virtual-tour-header {
-        margin-bottom: 40px;
-    }
-}
-
-@media (max-width: 768px) {
-    .photo-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, auto);
-        gap: 20px;
-    }
-    
-    .virtual-tour h1 {
-        font-size: 60px;
-        line-height: 70px;
-    }
-    
-    .photo-card h2 {
-        font-size: 28px;
-    }
-    
-    .photo-card h3 {
-        font-size: 20px;
-    }
-    
-    .photo-card h4 {
-        font-size: 16px;
-    }
-    
-    .photo-card img {
-        height: 250px;
-    }
-}
-
-@media (max-width: 480px) {
-    .virtual-tour h1 {
-        font-size: 40px;
-        line-height: 50px;
-        letter-spacing: 3px;
-    }
-    
-    .photo-card h2 {
-        font-size: 24px;
-        letter-spacing: 3px;
-    }
-    
-    .virtual-tour {
-        padding: 40px 15px;
-    }
-}
-
 .Picture-explore {
     background-color: #000000;
     box-sizing: border-box;
@@ -481,6 +413,14 @@ header h2 {
 
 .text-content {
     width: 660px;
+}
+
+.picture-line {
+    width: 100%;
+    max-width: 660px;
+    height: 3px;
+    margin-bottom: 50px;
+    margin-top: -10px;
 }
 
 .images-container {
@@ -520,7 +460,6 @@ header h2 {
     left: 0;
     width: 720px;
     height: 700px;
-    transform: translateX(-50%);
 }
 
 #image2 {
@@ -577,17 +516,17 @@ header h2 {
 }
 
 .Video-text h1 {
-    font-family: 'Forum';
+    font-family: "Forum";
     font-weight: 400;
     font-size: 80px;
     line-height: 90px;
     letter-spacing: 5px;
     text-transform: uppercase;
-    color: #9D8665;
+    color: #9d8665;
 }
 
 .Video-text h4 {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 300;
     font-size: 22px;
     line-height: 38.5px;
@@ -598,13 +537,6 @@ header h2 {
 .videoo {
     background-color: #000000;
 }
-
-
-
-
-
-
-
 
 .Art-gallery {
     background-color: #000000;
@@ -678,8 +610,8 @@ header h2 {
 }
 
 .Buy-tickets h1 {
-    color: #9D8665;
-    font-family: 'Forum';
+    color: #9d8665;
+    font-family: "Forum";
     font-weight: 400;
     font-size: 80px;
     line-height: 90px;
@@ -711,15 +643,23 @@ header h2 {
 }
 
 .Ticket-Type {
-    position: absolute;
-    top: 50%;
-    right: 450px;
-    transform: translateY(-110%);
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin-right: 450px;
+    margin-top: -30px;
+}
+
+.Ticket-Type label {
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0%;
 }
 
 .Ticket-Type h3 {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 700;
     font-size: 28px;
     line-height: 100%;
@@ -727,7 +667,7 @@ header h2 {
 }
 
 .Ticket-Type h5 {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 300;
     font-size: 22px;
     line-height: 100%;
@@ -735,14 +675,15 @@ header h2 {
 }
 
 .Amount {
-    transform: translateY(-90%);
-    text-align: right;
+    transform: translateY(-77%);
     position: absolute;
-    top: 48%;
+    top: 67%;
+    display: flex;
+    flex-direction: column;
 }
 
 .Amount h3 {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 700;
     font-size: 28px;
     line-height: 100%;
@@ -750,7 +691,7 @@ header h2 {
 }
 
 .Amount h4 {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 700;
     font-size: 28px;
     line-height: 100%;
@@ -758,11 +699,58 @@ header h2 {
 }
 
 .Amount h5 {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 300;
     font-size: 22px;
     line-height: 100%;
     letter-spacing: 0%;
+}
+
+.Amount-button {
+    background-color: #ffffff;
+    border: 3px solid #000000;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.amount-button {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Amount-button span {
+    user-select: none;
+}
+
+.minus {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    text-align: center;
+}
+
+.plus {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    text-align: center;
+}
+
+.value {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
 }
 
 .button-container {
@@ -779,7 +767,7 @@ header h2 {
     display: inline-block;
     border: none;
     cursor: pointer;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 300;
     font-size: 22px;
     line-height: 100%;
@@ -798,56 +786,14 @@ header h2 {
 
 .parallax-image {
     width: 100%;
-    min-width: 1920px;
     height: 400px;
+    object-fit: cover;
     display: block;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     object-fit: cover;
     object-position: center;
-}
-
-@media (min-width: 1920px) {
-    .parallax-image {
-        width: 100%;
-        min-width: 100%;
-    }
-}
-
-@media (max-width: 1024px) {
-    .parallax-image {
-        min-width: 100%;
-        height: 400px;
-        left: 0;
-        transform: none;
-    }
-}
-
-@media (max-width: 768px) {
-    .parallax-image-container {
-        padding-top: 50px;
-    }
-    
-    .parallax-image {
-        min-width: 100%;
-        height: 350px;
-        left: 0;
-        transform: none;
-    }
-}
-
-@media (max-width: 420px) {
-    .parallax-image-container {
-        padding-top: 30px;
-    }
-    
-    .parallax-image {
-        min-width: 100%;
-        height: 250px;
-        left: 0;
-        transform: none;
-    }
 }
 
 .Contacts {
@@ -870,6 +816,23 @@ header h2 {
     line-height: 90px;
     letter-spacing: 5px;
     text-transform: uppercase;
+}
+
+#section-line3 {
+    width: 100%;
+    height: 3px;
+    margin-top: 50px;
+}
+
+#section-line2 {
+    width: 100%;
+    height: 3px;
+}
+
+#section-line1 {
+    width: 100%;
+    height: 3px;
+    margin-bottom: 60px;
 }
 
 .Palais-Royal {
@@ -900,109 +863,6 @@ header h2 {
     font-size: 22px;
     line-height: 100%;
     letter-spacing: 0%;
-}
-
-@media (max-width: 1024px) {
-    .Contacts {
-        max-width: 1024px;
-        padding: 0 20px 60px;
-    }
-    
-    .Contacts h1 {
-        font-size: 70px;
-        line-height: 80px;
-    }
-    
-    .Palais-Royal-container {
-        margin-top: 60px;
-    }
-    
-    .Palais-Royal h2 {
-        font-size: 24px;
-    }
-    
-    .Palais-Royal h4 {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .Contacts {
-        max-width: 768px;
-        padding: 0 15px 50px;
-    }
-    
-    .Contacts h1 {
-        font-size: 60px;
-        line-height: 70px;
-        letter-spacing: 3px;
-    }
-    
-    .Palais-Royal-container {
-        flex-direction: column;
-        margin-top: 50px;
-    }
-    
-    .Palais-Royal {
-        max-width: 100%;
-        margin-bottom: 40px;
-    }
-    
-    .Palais-Royal h2 {
-        font-size: 24px;
-    }
-    
-    .Palais-Royal h4 {
-        font-size: 20px;
-        margin: 10px 0;
-    }
-    
-    .Palais-Royal-text-container {
-        padding: 20px 0 0 0;
-    }
-    
-    .Palais-Royal-container img {
-        width: 100%;
-        max-width: 600px;
-        height: auto;
-    }
-}
-
-@media (max-width: 420px) {
-    .Contacts {
-        max-width: 420px;
-        padding: 0 10px 40px;
-    }
-    
-    #cntcts {
-        margin-bottom: -35px;
-    }
-    
-    .Contacts h1 {
-        font-size: 40px;
-        line-height: 50px;
-        letter-spacing: 2px;
-    }
-    
-    .Palais-Royal-container {
-        margin-top: 40px;
-    }
-    
-    .Palais-Royal h2 {
-        font-size: 22px;
-    }
-    
-    .Palais-Royal h4 {
-        font-size: 18px;
-    }
-    
-    .Palais-Royal {
-        margin-bottom: 30px;
-    }
-    
-    .Palais-Royal-container img {
-        max-width: 100%;
-    }
 }
 
 footer {
@@ -1088,120 +948,64 @@ footer {
     letter-spacing: 2px;
 }
 
-@media (max-width: 768px) {
-    .Footer-Navigation {
-        margin-left: 100px;
-        margin-top: 100px;
-        margin-bottom: -50px;
-    }
-    
-    .Navigation-container-other {
-        margin-left: 80px;
-    }
-    
-    .Footer-Logo {
-        margin-bottom: -150px;
-    }
-    
-    .footer-line {
-        margin: 50px auto 40px;
-        width: calc(100% + 40px);
-        margin-left: -20px;
-    }
-}
-
-@media (max-width: 420px) {
-    .Footer-last-string h3:nth-child(2) {
-        display: none;
-    }
-    
-    .Footer-Navigation {
-        margin-left: 0;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-top: 50px;
-        margin-bottom: 30px;
-    }
-    
-    .Navigation-container-other {
-        margin-left: 30px;
-    }
-    
-    .Footer-Social {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-    
-    .Footer-Logo {
-        justify-content: center;
-        margin-bottom: 0;
-    }
-    
-    .Footer-Logo h1 {
-        font-size: 24px;
-    }
-    
-    footer {
-        padding-top: 40px;
-    }
-    
-    .Footer-Navigation h3 {
-        font-size: 18px;
-        margin: 5px 0;
-    }
-    
-    .Footer-last-string h3 {
-        font-size: 18px;
-    }
-    
-    .footer-line {
-        margin: 40px auto 30px;
-        width: 100%;
-        margin-left: 0;
-    }
-}
-
-@media (max-width: 320px) {
-    .Footer-last-string {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    
-    .Footer-last-string h3 {
-        margin: 0;
-    }
-    
-    .Footer-Navigation {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    
-    .Navigation-container-other {
-        margin-left: 0;
-    }
-}
-
-/* max-width: 1440px;
-    width: 100%;
-    margin: 0 auto; */
-
-
-
 .Booking-tickets {
     display: flex;
-    width: 1920px;
+    width: 100%;
+    max-width: 1440px;
     margin: 0 auto;
     align-items: flex-start;
     justify-content: center;
     flex-direction: row-reverse;
 }
 
+.Booking-tickets {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(-150%);
+    background: white;
+    z-index: 1000;
+    overflow-y: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease-in-out;
+}
+
+.Booking-tickets.active {
+    transform: translate(-50%, -50%) translateX(0);
+}
+
+body.modal-open::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+body.modal-open::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
 .close-tickets {
     border: none;
     background-color: #ffffff;
+    cursor: pointer;
+}
+
+#close-tickets-btn {
+    cursor: pointer;
 }
 
 .Booking-tickets-close {
@@ -1213,7 +1017,7 @@ footer {
 .Booking-tickets-container {
     display: flex;
     column-gap: 20px;
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 91px 0px 91px 0px;
     margin-right: 30px;
@@ -1232,8 +1036,8 @@ footer {
 }
 
 .left-content-logo h1 {
-    color: #9D8665;
-    font-family: 'Forum';
+    color: #9d8665;
+    font-family: "Forum";
     font-weight: 400;
     font-size: 50px;
     line-height: 100%;
@@ -1244,7 +1048,7 @@ footer {
 
 .left-content-logo h4 {
     color: #710707;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 400;
     font-size: 18px;
     line-height: 100%;
@@ -1260,7 +1064,7 @@ footer {
 #Date {
     width: 130px;
     color: #030303;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 400;
     font-size: 18px;
     line-height: 100%;
@@ -1269,10 +1073,10 @@ footer {
     border: none;
 }
 
-#Time{
+#Time {
     width: 130px;
     color: #030303;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 400;
     font-size: 18px;
     line-height: 100%;
@@ -1316,7 +1120,7 @@ footer {
 
 .left-content-name input {
     color: #030303;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 400;
     font-size: 18px;
     line-height: 100%;
@@ -1342,7 +1146,7 @@ footer {
 
 .left-content-email input {
     color: #030303;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 400;
     font-size: 18px;
     line-height: 100%;
@@ -1367,7 +1171,7 @@ footer {
 
 .left-content-phone input {
     color: #030303;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 400;
     font-size: 18px;
     line-height: 100%;
@@ -1392,7 +1196,7 @@ footer {
 
 .left-content-ticket-type input {
     color: #030303;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 400;
     font-size: 18px;
     line-height: 100%;
@@ -1406,6 +1210,7 @@ footer {
     height: 45px;
     border: none;
 }
+
 .left-content-entry-ticket {
     width: 400px;
     height: 135px;
@@ -1418,8 +1223,8 @@ footer {
 }
 
 .entry-ticket-logo h1 {
-    color: #9D8665;
-    font-family: 'Forum';
+    color: #9d8665;
+    font-family: "Forum";
     font-weight: 400;
     font-size: 18px;
     line-height: 100%;
@@ -1441,7 +1246,7 @@ footer {
 }
 
 .entry-ticket-name h3 {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 400;
     font-size: 18px;
     line-height: 100%;
@@ -1456,7 +1261,7 @@ footer {
 }
 
 .entry-ticket-but h3 {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 400;
     font-size: 18px;
     line-height: 100%;
@@ -1473,7 +1278,7 @@ footer {
     justify-content: space-between;
     background: transparent;
     cursor: pointer;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 400;
     font-size: 18px;
     line-height: 100%;
@@ -1494,6 +1299,7 @@ footer {
     background: #000;
     color: #fff;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .btn-value {
@@ -1502,7 +1308,6 @@ footer {
     color: #000;
     font-size: 14px;
 }
-
 
 .Booking-tickets-right-content {
     width: 530px;
@@ -1531,7 +1336,7 @@ footer {
 }
 
 .right-content-one-section h4 {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 300;
     font-size: 18px;
     line-height: 100%;
@@ -1554,26 +1359,24 @@ footer {
 }
 
 .right-content-one-section h2 {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 500;
     font-size: 22px;
     line-height: 100%;
     letter-spacing: 0%;
-    color: #740C11;
+    color: #740c11;
 }
 
 .right-content-one-section h1 {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 500;
-    font-size: 32px;;
+    font-size: 32px;
     line-height: 100%;
     letter-spacing: 0%;
     color: #272727;
 }
 
-.right-content-two-section {
-
-}
+.right-content-two-section {}
 
 .content-two-section-container {
     margin-top: -20px;
@@ -1589,14 +1392,14 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #A4A4A3;
+    color: #a4a4a3;
     background-color: #000000;
     width: 32px;
     height: 20px;
 }
 
 .two-section-quantity h5 {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 400;
     font-size: 18px;
     line-height: 100%;
@@ -1610,7 +1413,7 @@ footer {
 }
 
 .two-section-price h2 {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 400;
     font-size: 22px;
     line-height: 100%;
@@ -1634,7 +1437,7 @@ footer {
 }
 
 .two-section-total h2 {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 400;
     font-size: 32px;
     line-height: 100%;
@@ -1642,7 +1445,7 @@ footer {
 }
 
 .two-section-total h1 {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 500;
     font-size: 32px;
     line-height: 100%;
@@ -1652,7 +1455,7 @@ footer {
 #book-but {
     width: 220px;
     height: 45px;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 400;
     font-size: 22px;
     line-height: 100%;
@@ -1668,7 +1471,7 @@ footer {
 }
 
 .right-content-three-section {
-    background-color: #BCBCBC;
+    background-color: #bcbcbc;
     width: 360px;
     height: 211px;
     margin-top: -20px;
@@ -1677,7 +1480,7 @@ footer {
 
 .right-content-three-section h3 {
     color: #161615;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 400;
     font-size: 12px;
     line-height: 100%;
@@ -1686,7 +1489,7 @@ footer {
 
 .right-content-three-section input {
     color: #161615;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 400;
     font-size: 12px;
     line-height: 100%;
@@ -1706,43 +1509,36 @@ footer {
     margin-top: -104px;
 }
 
-.card-number {
-}
+.card-number {}
 
 #card-number {
     width: 215px;
     height: 35px;
     opacity: 1;
     border-width: 0.5px;
-    border-color: #A4A4A3;
+    border-color: #a4a4a3;
 }
 
-.Expiration-date-container {
+.Expiration-date-container {}
 
-}
-
-.Expiration-date {
-
-}
+.Expiration-date {}
 
 #Expiration-date {
     width: 100px;
     height: 35px;
     opacity: 1;
     border-width: 0.5px;
-    border-color: #A4A4A3;
+    border-color: #a4a4a3;
 }
 
-.Cardholder-name {
-
-}
+.Cardholder-name {}
 
 #Cardholder-name {
     width: 320px;
     height: 35px;
     opacity: 1;
     border-width: 0.57px;
-    border-color: #A4A4A3;
+    border-color: #a4a4a3;
 }
 
 #content-text-margin {
@@ -1755,12 +1551,12 @@ footer {
     height: 211px;
     margin-left: 110px;
     margin-top: -170px;
-    position: relative; 
+    position: relative;
     margin-bottom: -10px;
 }
 
 .right-content-four-section::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -1800,7 +1596,7 @@ footer {
 }
 
 .content-four-cvv h2 {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 400;
     font-size: 12px;
     line-height: 100%;
@@ -1809,7 +1605,7 @@ footer {
 }
 
 .content-four-cvv h3 {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 400;
     font-size: 10px;
     line-height: 100%;
@@ -1823,7 +1619,7 @@ footer {
     height: 35px;
     opacity: 1;
     border-width: 0.5px;
-    border: 0.5px solid #A4A4A3
+    border: 0.5px solid #a4a4a3;
 }
 
 .last-button {
@@ -1831,4 +1627,248 @@ footer {
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-end;
+}
+
+@media (max-width: 1440px) {
+    .welcome-container {
+        padding: 0 20px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .header-nav button {
+        display: none;
+    }
+
+    .burger-icon {
+        display: block;
+    }
+
+    .welcome-img {
+        margin-top: 50px;
+        width: 700px;
+        height: 525px;
+    }
+
+    .Welcome {
+        height: 685px;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 75px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .images-container {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .card-line {
+        max-width: 150px;
+    }
+
+    .card-img {
+        max-width: 330px;
+    }
+
+    .images-wrapper {
+        margin: 0 auto;
+    }
+
+    .text-content-h4 {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .Welcome-content button {
+        display: none;
+    }
+
+    .text-content h4 {
+        display: none;
+    }
+
+    .text-content h1 {
+        font-family: "Forum";
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 60px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .virtual-tour-header h1 {
+        font-family: "Forum";
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 60px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .Welcome-content {
+        font-size: 40px;
+    }
+
+    .Welcome-content h1 {
+        font-size: 40px;
+        line-height: 60px;
+        text-align: center;
+    }
+
+    .Welcome-content h4 {
+        font-size: 20px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin-left: 50px;
+    }
+
+    .card-img {
+        max-width: 280px;
+    }
+
+    .card-line {
+        width: 150px;
+    }
+
+    #welcome-img {
+        mask-image: none;
+        -webkit-mask-image: none;
+        width: 728px;
+        height: 546px;
+        margin-right: 20px;
+    }
+
+    .gallery-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Palais-Royal-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .Footer-Navigation {
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 40px;
+    }
+
+    .welcome-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .Welcome-image {
+        order: 2;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 425px) {
+    .text-content {
+        font-family: "Forum";
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 40px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .virtual-tour-header h1 {
+        font-family: "Forum";
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 60px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .virtual-tour-header {
+        font-size: 28px;
+    }
+
+    .Welcome-content h1 {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .Welcome-content h4 {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+        margin-left: 50px;
+    }
+
+    .card-img {
+        max-width: 280px;
+    }
+
+    .card-line {
+        width: 150px;
+    }
+
+    .images-container {
+        width: 380px;
+        margin-top: 40px;
+    }
+
+    .images-wrapper {
+        width: 380px;
+        height: 368px;
+    }
+
+    .image-left {
+        width: 190px;
+        height: 368px;
+    }
+
+    .image-right {
+        left: 190px;
+        width: 190px;
+        height: 368px;
+    }
+
+    #image1,
+    #image2 {
+        width: 380px;
+        height: 368px;
+    }
+
+    #explore {
+        left: 180px;
+        height: 368px;
+    }
+
+    .welcome-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }

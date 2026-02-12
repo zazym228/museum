@@ -1,226 +1,407 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="script.js">
     <title>Document</title>
 </head>
-
-<header>
-    <div class="header-container">
-        <div class="header-logo">
-            <h1>LOUVRE</h1>
-            <img src="images/Vector.png" alt="Louvre icon" />
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-logo">
+                <h1>LOUVRE</h1>
+                <img src="images/Vector.png" alt="Louvre icon" />
+            </div>
+            <div class="header-nav">
+                <button onclick="location.href='#virtual-tour'">Visiting</button>
+                <button onclick="location.href='#Picture-explore'">Explore</button>
+                <button onclick="location.href='#Video-journey'">Video</button>
+                <button onclick="location.href='#Art-gallery'">Gallery</button>
+                <button onclick="location.href='#Buy-tickets'">Tickets</button>
+                <button onclick="location.href='#Contacts'">Contacts</button>
+                <img src="images/Group 44.png" class="burger-icon" style="width: 32px; height: 18px;" alt="">
+            </div>
         </div>
-        <div class="header-nav">
-            <h2>Visiting</h2>
-            <h2>Explore</h2>
-            <h2>Video</h2>
-            <h2>Gallery</h2>
-            <h2>Tickets</h2>
-            <h2>Contacts</h2>
-        </div>
-    </div>
-</header>
-
-<main>
-    <section class="Welcome">
-        <div class="welcome-container">
-            <div class="Welcome-content">
-                <h1>
-                    Welcome <br />
-                    to the Louvre
-                </h1>
-                <h4>From the castle to the museum</h4>
-                <button>
-                    <a
-                        href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736">
-                        Discover the Louvre
-                    </a>
+    </header>
+    <main>
+        <section class="Welcome">
+            <div class="welcome-container">
+                <div class="Welcome-content">
+                    <h1>
+                        Welcome
+                        to the Louvre
+                    </h1>
+                    <h4>From the castle to the museum</h4>
+                    <button>
+                        <a
+                            href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736">
+                            Discover the Louvre
+                        </a>
+                    </button>
+                </div>
+                <div class="Welcome-image">
+                    <img id="welcome-img" src="images/mono-lisa.jpg" alt="Mona Lisa" class="welcome-img" />
+                </div>
+            </div>
+            <div class="burger-menu">
+                <button onclick="location.href='#virtual-tour'">Visiting</button>
+                <button onclick="location.href='#Picture-explore'">Explore</button>
+                <button onclick="location.href='#Video-journey'">Video</button>
+                <button onclick="location.href='#Art-gallery'">Gallery</button>
+                <button onclick="location.href='#Buy-tickets'">Tickets</button>
+                <button onclick="location.href='#Contacts'">Contacts</button>
+            </div>
+        </section>
+        <section id="virtual-tour" class="virtual-tour">
+            <div class="virtual-tour-header">
+                <h1>VIRTUAL TOUR</h1>
+                <img id="section-line2" src="images/Rectangle.png" alt="" />
+            </div>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <img src="images/royal.jpg" class="card-img" alt="Royal Palace" />
+                    <div class="card-content">
+                        <h2>ROYAL PALACE</h2>
+                        <img src="images/Rectangle.png" class="card-line" alt="" />
+                        <h3>360° Virtual Tour</h3>
+                        <h4>Google Street Panorama View</h4>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <img src="images/denon.jpg" class="card-img" alt="Denon Wing" />
+                    <div class="card-content">
+                        <h2>DENON WING</h2>
+                        <img src="images/Rectangle.png" class="card-line" alt="" />
+                        <h3>360° Virtual Tour</h3>
+                        <h4>Google Street Panorama View</h4>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <img src="images/colonnade.jpg" class="card-img" alt="Colonnade Perrault" />
+                    <div class="card-content">
+                        <h2>COLONNADE PERRAULT</h2>
+                        <img src="images/Rectangle.png" class="card-line" alt="" />
+                        <h3>360° Virtual Tour</h3>
+                        <h4>Google Street Panorama View</h4>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <img src="images/geek.jpg" class="card-img" alt="Greek Hall" />
+                    <div class="card-content">
+                        <h2>GREEK HALL</h2>
+                        <img src="images/Rectangle.png" class="card-line" alt="" />
+                        <h3>360° Virtual Tour</h3>
+                        <h4>Google Street Panorama View</h4>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <img src="images/lisa.jpg" class="card-img" alt="Mona Lisa" />
+                    <div class="card-content">
+                        <h2>MONA LISA</h2>
+                        <img src="images/Rectangle.png" class="card-line" alt="" />
+                        <h3>360° Virtual Tour</h3>
+                        <h4>Google Street Panorama View</h4>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <img src="images/night.jpg" class="card-img" alt="Night Palace" />
+                    <div class="card-content">
+                        <h2>NIGHT PALACE</h2>
+                        <img src="images/Rectangle.png" class="card-line" alt="" />
+                        <h3>360° Virtual Tour</h3>
+                        <h4>Google Street Panorama View</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Picture-explore" class="Picture-explore">
+            <div class="container">
+                <div class="text-content">
+                    <h1>PICTURE EXPLORE</h1>
+                    <img src="images/Rectangle.png" class="picture-line" alt="">
+                    <h4>
+                        Las Meninas is a 1656 painting by Diego Velázquez, the leading
+                        artist of the Spanish Golden Age.
+                    </h4>
+                    <h4>
+                        It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that had
+                        gathered since the previous restoration in the 19th century.
+                    </h4>
+                    <h4 class="text-content-h4">
+                        The cleaning provoked furious protests, not because the picture had
+                        been damaged in any way, but because it looked different.
+                    </h4>
+                </div>
+                <div class="images-container">
+                    <div class="images-wrapper">
+                        <div class="image-left">
+                            <img id="image1" src="images/image1.jpg" alt="">
+                        </div>
+                        <div class="image-right">
+                            <img id="image2" src="images/image2.jpg" alt="">
+                        </div>
+                        <img id="explore" src="images/explore slider.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Video-journey" class="Video-journey">
+            <div class="Video-text">
+                <h1>VIDEO JOURNEY</h1>
+                <h4>
+                    Enter and visit one of the most famous museums in the world and enjoy masterpieces 
+                    such as Mona Lisa or Hammurabi's Code
+                </h4>
+            </div>
+            <div class="videoo"><video src="https://youtu.be/zp1BXPX8jcU"></video></div>
+            <div><video src="https://youtu.be/Vi5D6FKhRmo"></video></div>
+            <div><video src="https://youtu.be/NOhDysLnTvY"></video></div>
+            <div><video src="https://youtu.be/aWmJ5DgyWPI"></video></div>
+        </section>
+        <section id="Art-gallery" class="Art-gallery">
+            <div class="Art-contaier">
+                <h1>ART GALLERY</h1>
+                <div class="gallery-grid">
+                    <div class="gallery-column left-column">
+                        <img src="art/galery2.jpg" alt="" />
+                        <img src="art/galery9.jpg" alt="" />
+                        <img src="art/galery4.jpg" alt="" />
+                        <img id="column-img" src="art/galery61.png" alt="">
+                    </div>
+                    <div class="gallery-column middle-column">
+                        <img src="art/galery1.jpg" alt="" />
+                        <img src="art/galery8.jpg" alt="" />
+                        <img src="art/galery3.jpg" alt="" />
+                        <img id="column-img" src="art/galery51.png" alt="">
+                    </div>
+                    <div class="gallery-column right-column">
+                        <img src="art/galery7.jpg" alt="" />
+                        <img src="art/galery10.jpg" alt="" />
+                        <img src="art/galery15.jpg" alt="" />
+                        <img id="column-img" src="art/galery121.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Buy-tickets" class="Buy-tickets">
+            <h1>BUY TICKETS</h1>
+            <img id="section-line1" src="images/Rectangle.png" alt="">
+            <div class="content-container">
+                <img src="images/cartina.jpg" style="width: 720px; height: 550px;" alt="" />
+                <div class="Ticket-Amount-contaier">
+                    <div class="Ticket-Type">
+                        <h3>Ticket Type</h3>
+                        <label><input type="radio">Permanent exhibition</label>
+                        <label><input type="radio">Temporary exhibition</label>
+                        <label><input type="radio">Combined Admission</label>
+                    </div>
+                    <div class="Amount">
+                        <h3>Amount</h3>
+                        <h5>Basic 18+</h5>
+                        <button class="amount-button" data-price="20">
+                            <span class="minus">-</span>
+                            <span class="value">1</span>
+                            <span class="plus">+</span>
+                        </button>
+                        <h5>Basic 65+</h5>
+                        <button class="amount-button" data-price="10">
+                            <span class="minus">-</span>
+                            <span class="value">1</span>
+                            <span class="plus">+</span>
+                        </button>
+                        <h4>Total €220</h4>
+                        <a id="Buy-Now" href="">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="Booking-tickets">
+            <div class="Booking-tickets-close">
+                <button class="close-tickets">
+                    <img id="close-tickets-btn" src="images/Close.png" alt="">
                 </button>
             </div>
-            <div class="Welcome-image">
-                <img id="welcome-img" src="images/mono-lisa.jpg" style="width: 1000px; height: 750px;" alt="Mona Lisa"
-                    class="welcome-img" />
-            </div>
-        </div>
-    </section>
-    <section class="virtual-tour">
-        <div class="virtual-tour-header">
-            <h1>VIRTUAL TOUR</h1>
-            <img src="images/Rectangle.png" style="width: 1440px; height: 3px; margin-left: -20px" alt="" />
-        </div>
-        <div class="photo-grid">
-            <div class="photo-card">
-                <img src="images/royal.jpg" alt="Royal Palace" />
-                <div class="card-content">
-                    <h2>ROYAL PALACE</h2>
-                    <img src="images/Rectangle.png" style="width: 300px; height: 2px" alt="" />
-                    <h3>360° Virtual Tour</h3>
-                    <h4>Google Street Panorama View</h4>
-                </div>
-            </div>
-            <div class="photo-card">
-                <img src="images/denon.jpg" alt="Denon Wing" />
-                <div class="card-content">
-                    <h2>DENON WING</h2>
-                    <img src="images/Rectangle.png" style="width: 300px; height: 2px" alt="" />
-                    <h3>360° Virtual Tour</h3>
-                    <h4>Google Street Panorama View</h4>
-                </div>
-            </div>
-            <div class="photo-card">
-                <img src="images/colonnade.jpg" alt="Colonnade Perrault" />
-                <div class="card-content">
-                    <h2>COLONNADE PERRAULT</h2>
-                    <img src="images/Rectangle.png" style="width: 300px; height: 2px" alt="" />
-                    <h3>360° Virtual Tour</h3>
-                    <h4>Google Street Panorama View</h4>
-                </div>
-            </div>
-            <div class="photo-card">
-                <img src="images/geek.jpg" alt="Greek Hall" />
-                <div class="card-content">
-                    <h2>GREEK HALL</h2>
-                    <img src="images/Rectangle.png" style="width: 300px; height: 2px" alt="" />
-                    <h3>360° Virtual Tour</h3>
-                    <h4>Google Street Panorama View</h4>
-                </div>
-            </div>
-            <div class="photo-card">
-                <img src="images/lisa.jpg" alt="Mona Lisa" />
-                <div class="card-content">
-                    <h2>MONA LISA</h2>
-                    <img src="images/Rectangle.png" style="width: 300px; height: 2px" alt="" />
-                    <h3>360° Virtual Tour</h3>
-                    <h4>Google Street Panorama View</h4>
-                </div>
-            </div>
-            <div class="photo-card">
-                <img src="images/night.jpg" alt="Night Palace" />
-                <div class="card-content">
-                    <h2>NIGHT PALACE</h2>
-                    <img src="images/Rectangle.png" style="width: 300px; height: 2px" alt="" />
-                    <h3>360° Virtual Tour</h3>
-                    <h4>Google Street Panorama View</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="Picture-explore">
-        <div class="container">
-            <div class="text-content">
-                <h1>PICTURE EXPLORE</h1>
-                <img src="images/Rectangle.png" style="
-                width: 660px;
-                height: 3px;
-                color: #710707;
-                margin-bottom: 50px;
-                margin-top: -10px;
-            " alt="">
-                <h4>
-                    Las Meninas is a 1656 painting by Diego Velázquez, the leading
-                    <br>
-                    artist of the Spanish Golden Age.
-                </h4>
-                <h4>
-                    It was cleaned in 1984 to remove a <span>"yellow veil"</span> of
-                    dust that had <br>
-                    gathered since the previous restoration in the 19th century.
-                </h4>
-                <h4>
-                    The cleaning provoked furious protests, not because the picture had
-                    <br>
-                    been damaged in any way, but because it looked different.
-                </h4>
-            </div>
-            <div class="images-container">
-                <div class="images-wrapper">
-                    <div class="image-left">
-                        <img id="image1" src="images/image1.jpg" alt="">
+            <div class="Booking-tickets-container">
+                <div class="Booking-tickets-left-content">
+                    <div class="left-content-logo">
+                        <img src="images/Booking tickets logo.png" style="width: 85px; height: 41px;" alt="">
+                        <h1>Booking tickets</h1>
+                        <h4>Tour to Louvre
+                            <div class="left-Rectangle">
+                                <img src="images/Rectangle.png" style="width: 400px; height: 3px" alt="">
+                            </div>
                     </div>
-                    <div class="image-right">
-                        <img id="image2" src="images/image2.jpg" alt="">
+                    <div class="left-content-data-time">
+                        <div class="left-content-data">
+                            <img src="images/date.png"
+                                style="width: 15px; height: 11px; margin-right: 15px; margin-left: 15px" alt="">
+                            <input id="Date" type="number" placeholder="Date" required>
+                            <img src="images/arrow down.png" style="width: 17px; height: 17px; margin-left: -30px;"
+                                alt="">
+                        </div>
+                        <div class="left-content-time">
+                            <img src="images/date.png"
+                                style="width: 15px; height: 10px; margin-right: 15px; margin-left: 15px" alt="">
+                            <input id="Time" type="number" placeholder="Time" required>
+                            <img src="images/arrow down.png" style="width: 17px; height: 17px; margin-left: -30px;"
+                                alt="">
+                        </div>
                     </div>
-                    <img id="explore" src="images/explore slider.png" alt="">
+                    <div class="left-content-but">
+                        <div class="left-content-name">
+                            <img src="images/name.png"
+                                style="width: 13px; height: 15px; margin-right: 15px; margin-left: 15px;" alt="">
+                            <input id="Name-but" type="Name" placeholder="Name" required>
+                        </div>
+                        <div class="left-content-email">
+                            <img src="images/email.png"
+                                style="width: 15px; height: 11px; margin-right: 15px; margin-left: 15px;" alt="">
+                            <input id="Email-but" type="email" placeholder="E-mail" required>
+                        </div>
+                        <div class="left-content-phone">
+                            <img src="images/tel.png"
+                                style="width: 14px; height: 23px; margin-right: 15px; margin-left: 15px;" alt="">
+                            <input id="Phone-but" type="tel" placeholder="Phone" required>
+                        </div>
+                        <div class="left-content-ticket-type">
+                            <img src="images/ticket.png"
+                                style="width: 15px; height: 15px; margin-right: 15px; margin-left: 15px;" alt="">
+                            <input id="Ticket-but" type="Ticket Type" placeholder="Ticket Type" required>
+                        </div>
+                    </div>
+                    <div class="left-content-entry-ticket">
+                        <div class="left-content-entry-ticket-container">
+                            <div class="entry-ticket-logo">
+                                <h1>Entry ticket</h1>
+                                <img src="images/Rectangle.png" style="width: 370px; height: 2px;" alt="">
+                            </div>
+                            <div class="entry-ticket-container">
+                                <div class="entry-ticket-name">
+                                    <h3>Basic 18+ (20 €)</h3>
+                                    <button id="entry-but">
+                                        <span class="btn-minus">−</span>
+                                        <span class="btn-value">2</span>
+                                        <span class="btn-plus">+</span>
+                                    </button>
+                                </div>
+                                <div class="entry-ticket-but">
+                                    <h3>Senior 65+ (10 €)</h3>
+                                    <button id="entry-but">
+                                        <span class="btn-minus">−</span>
+                                        <span class="btn-value">2</span>
+                                        <span class="btn-plus">+</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section class="Video-journey">
-        <div class="Video-text">
-            <h1>VIDEO JOURNEY</h1>
-            <h4>
-                Enter and visit one of the most famous museums in the world and enjoy
-                masterpieces <br> such as Mona Lisa or Hammurabi's Code
-            </h4>
-        </div>
-        <div class="videoo"><video src="https://youtu.be/zp1BXPX8jcU"></video></div>
-        <div><video src="https://youtu.be/Vi5D6FKhRmo"></video></div>
-        <div><video src="https://youtu.be/NOhDysLnTvY"></video></div>
-        <div><video src="https://youtu.be/aWmJ5DgyWPI"></video></div>
-    </section>
-    <section class="Art-gallery">
-        <div class="Art-contaier">
-            <h1>ART GALLERY</h1>
-            <div class="gallery-grid">
-                <div class="gallery-column left-column">
-                    <img src="art/galery2.jpg" alt="" />
-                    <img src="art/galery9.jpg" alt="" />
-                    <img src="art/galery4.jpg" alt="" />
-                    <img id="column-img" src="art/galery61.png" alt="">
+                <div class="Booking-tickets-right-content">
+                    <div class="Booking-tickets-right-content-container">
+                        <div class="right-content-one-section">
+                            <div class="right-content-one-section-container">
+                                <div class="content-one-magin">
+                                    <div id="content-one">
+                                        <img src="images/check_circle_outline.png" style="width: 15px; height: 15px;"
+                                            alt="">
+                                        <h4>Temporary exhibition</h4>
+                                    </div>
+                                    <div id="content-one">
+                                        <img src="images/time.png" style="width: 15px; height: 15px;" alt="">
+                                        <h4>16 : 30</h4>
+                                    </div>
+                                    <div id="content-one">
+                                        <img src="images/date.png" style="width: 15px; height: 15px;" alt="">
+                                        <h4>Friday, August 19</h4>
+                                    </div>
+                                </div>
+                                <h2 id="Tour-to-Louvre">Tour to Louvre</h2>
+                                <h1>Overview</h1>
+                            </div>
+                            <div class="content-one-img">
+                                <img src="images/manuel.jpg" style="width: 150px; height: 120px;" alt="">
+                            </div>
+                        </div>
+                        <div class="right-content-two-section">
+                            <div class="content-two-section-container">
+                                <div class="two-section-container">
+                                    <div class="two-section-quantity">
+                                        <h5>2</h5>
+                                    </div>
+                                    <div class="two-section-price">
+                                        <h2>Basic (20 €)</h2>
+                                        <h2>40 €</h2>
+                                    </div>
+                                </div>
+                                <div class="two-section-container-other">
+                                    <div class="two-section-quantity">
+                                        <h5>2</h5>
+                                    </div>
+                                    <div class="two-section-price">
+                                        <h2>Senior (10 €)</h2>
+                                        <h2>20 €</h2>
+                                    </div>
+                                </div>
+                                <img src="images/Rectangle.png" style="width: 470px; height: 2px;" alt="">
+                                <div class="two-section-total">
+                                    <h2>Total:</h2>
+                                    <h1>60 €</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-content-three-section">
+                            <div id="content-three-section">
+                                <img src="images/Visa.png" style="width: 55px; height: 16px;" alt="">
+                                <img src="images/Mastercard.png" style="width: 53px; height: 32px;" alt="">
+                            </div>
+                            <div class="content-three-container">
+                                <div class="card-number">
+                                    <h3 id="content-text-margin">Card number</h3>
+                                    <input id="card-number" type="number">
+                                </div>
+                                <div class="Expiration-date-container">
+                                    <div class="Expiration-date">
+                                        <h3 id="content-text-margin">Expiration date</h3>
+                                        <input id="Expiration-date" type="number" placeholder="02" required>
+                                        <input id="Expiration-date" type="number" placeholder="2026" required>
+                                    </div>
+                                </div>
+                                <div class="Cardholder-name">
+                                    <h3 id="content-text-margin">Cardholder name</h3>
+                                    <input id="Cardholder-name" type="number">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-content-four-section">
+                            <div class="black-linear"></div>
+                            <div class="content-four-cvv">
+                                <h2>CVC/CVV</h2>
+                                <input id="input-cvv" type="number" required>
+                                <h3>The last
+                                    3 or 4 digits
+                                    on back
+                                    of the card</h3>
+                            </div>
+                        </div>
+                        <div class="last-button">
+                            <button id="book-but">Book</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="gallery-column middle-column">
-                    <img src="art/galery1.jpg" alt="" />
-                    <img src="art/galery8.jpg" alt="" />
-                    <img src="art/galery3.jpg" alt="" />
-                    <img id="column-img" src="art/galery51.png" alt="">
-                </div>
-                <div class="gallery-column right-column">
-                    <img src="art/galery7.jpg" alt="" />
-                    <img src="art/galery10.jpg" alt="" />
-                    <img src="art/galery15.jpg" alt="" />
-                    <img id="column-img" src="art/galery121.png" alt="" />
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="Buy-tickets">
-        <h1>BUY TICKETS</h1>
-        <img src="images/Rectangle.png" style="width: 1440px; height: 3px; margin-bottom: 60px;" alt="">
-        <div class="content-container">
-            <img src="images/cartina.jpg" style="width: 720px; height: 550px;" alt="" />
-            <div class="Ticket-Amount-contaier">
-                <div class="Ticket-Type">
-                    <h3>Ticket Type</h3>
-                    <h5>Permanent exhibition</h5>
-                    <h5>Temporary exhibition</h5>
-                    <h5>Combined Admission</h5>
-                </div>
-                <div class="Amount">
-                    <h3>Amount</h3>
-                    <h5>Basic 18+</h5>
-                    <h5>Basic 65+</h5>
-                    <h4>Total €220</h4>
-                    <a id="Buy-Now" href="">Buy Now</a>
-                </div>
-            </div>
-        </div </section>
+        </section>
         <div class="parallax-image-container">
             <img src="images/parallax.png" alt="" class="parallax-image">
         </div>
-        <section class="Contacts">
+        <section id="Contacts" class="Contacts">
             <div id="cntcts">
                 <h1>CONTACTS</h1>
             </div>
-            <img src="images/Rectangle.png" style="width: 1440px; height: 3px; margin-top: 50px;" alt="" />
+            <img id="section-line3" src="images/Rectangle.png" alt="" />
             <div class="Palais-Royal-container">
                 <div class="Palais-Royal">
                     <h2>
-                        Palais Royal <br>
+                        Palais Royal
                         Musee du Louvre
                     </h2>
                     <div class="Palais-Royal-text-container">
@@ -232,8 +413,9 @@
                 <img src="images/louvre_map.png" alt="" />
             </div>
         </section>
-</main>
-
+    </main>
+    <script src="script.js"></script>
+</body>
 <footer>
     <div class="footer-container">
         <div class="Footer-Logo">
